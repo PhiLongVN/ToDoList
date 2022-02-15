@@ -1,0 +1,459 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  font-family: "Josefin Sans", sans-serif;
+  margin: 0;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  outline: none;
+  border: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+body.active {
+  background-image: url(../images/bg-desktop-dark.jpg);
+  background-color: #25273c;
+  /* ------------------- HEAD ------------------- */
+  /* ------------------- .MAIN ------------------ */
+}
+
+body.active .head {
+  color: #faf5ff;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+body.active .head .toggle img:nth-of-type(2) {
+  display: none;
+}
+
+body.active .head .toggle img:nth-of-type(1) {
+  display: block;
+}
+
+body.active .main .main-input {
+  background: #25273c;
+}
+
+body.active .main .main-input .input-text {
+  background: #25273c;
+  color: #b7bbd0;
+}
+
+body.active .main .main-output {
+  background: #25273c;
+}
+
+body.active .main .main-option {
+  background: #25273c;
+}
+
+body.active .main .main-option .op-choose {
+  cursor: pointer;
+}
+
+body.active .main .main-option .op-choose .all:hover {
+  color: white;
+}
+
+body.active .main .main-option .op-choose .completed:hover {
+  color: white;
+}
+
+body.active .main .main-option .op-choose .active:hover {
+  color: white;
+}
+
+body.active .main .main-option .op-clear:hover {
+  color: white;
+}
+
+body.active .item {
+  background: #25273c;
+}
+
+body.active .item .text {
+  color: white;
+}
+
+body.active .item .check {
+  border: 1px solid white;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+  background-image: url(../images/bg-desktop-light.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center top;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+  width: 70%;
+  max-width: 600px;
+  margin-top: 3rem;
+}
+
+/* ============================================ */
+/*                     HEAD                     */
+/* ============================================ */
+.head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  color: #faf5ff;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.head .toggle {
+  cursor: pointer;
+}
+
+.head .toggle:hover {
+  -webkit-filter: brightness(80%);
+          filter: brightness(80%);
+}
+
+.head .toggle img:nth-of-type(1) {
+  display: none;
+}
+
+.head .toggle img:nth-of-type(2) {
+  display: block;
+}
+
+/* ============================================ */
+/*                     .MAIN                    */
+/* ============================================ */
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.218);
+          box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.218);
+}
+
+/* ---------------- .MAIN-INPUT --------------- */
+.main-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.8rem;
+  width: 100%;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  border-radius: 5px;
+  padding: 0.8rem 1rem;
+  font-size: 1.2rem;
+  background: #ffffff;
+}
+
+.main-input .bt-add {
+  width: 30px;
+  height: 30px;
+  border-radius: 100rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#9d7df9), to(#76b8f9));
+  background-image: linear-gradient(to top, #9d7df9, #76b8f9);
+  font-size: 2.5rem;
+  color: white;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.main-input .bt-add:hover {
+  opacity: 0.7;
+}
+
+.main-input .input-text {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background: #ffffff;
+  color: #4b4c51;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.main-output {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+}
+
+.main-option {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding: 1rem;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  background: #ffffff;
+  color: #6f6f7a;
+  border: 1px solid black;
+  border-radius: 0 0 10px 10px;
+}
+
+.main-option .op-choose {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+
+.main-option .op-choose .all:hover {
+  color: black;
+  font-weight: 700;
+}
+
+.main-option .op-choose .completed:hover {
+  color: black;
+  font-weight: 700;
+}
+
+.main-option .op-choose .active:hover {
+  font-weight: 700;
+  color: black;
+}
+
+.main-option .actived {
+  color: blue;
+  font-weight: 700;
+}
+
+.main-option .op-clear {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.main-option .op-clear:hover {
+  color: black;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+/* ============================================ */
+/*                      items                     */
+/* ============================================ */
+.item {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  background: white;
+  border: 1px solid black;
+  border-bottom: none;
+  cursor: pointer;
+  padding-left: 1rem;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.item:hover {
+  -webkit-filter: invert(0.1);
+          filter: invert(0.1);
+}
+
+.item.checked > .text {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+.item.checked > .check > img {
+  display: block;
+}
+
+.item .text {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: left;
+  padding: 1rem 0rem;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  padding-left: 0.8rem;
+}
+
+.item .check {
+  width: 30px;
+  height: 30px;
+  border-radius: 100rem;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  padding: 0rem;
+  border: 1px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.item .check img {
+  display: none;
+  width: 100%;
+  height: 100%;
+  border-radius: 100rem;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#948cfa), to(#79b3f9));
+  background-image: linear-gradient(to top, #948cfa, #79b3f9);
+  padding: 0.5rem;
+}
+
+.item .close {
+  cursor: pointer;
+  padding: 1rem;
+  height: 100%;
+}
+
+.item .close:hover {
+  background: rgba(179, 163, 163, 0.517);
+}
+
+.delete {
+  -webkit-transform: translateX(20%);
+          transform: translateX(20%);
+  opacity: 0;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+/* --------------------- V -------------------- */
+.drag {
+  padding: 1.5rem;
+  font-size: 1.5rem;
+}
+/*# sourceMappingURL=main.css.map */

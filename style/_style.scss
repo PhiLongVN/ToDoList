@@ -1,0 +1,248 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  min-height: 100vh;
+
+  background-image: url(../images/bg-desktop-light.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center top;
+  transition: all 1s ease;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+
+  width: 70%;
+  max-width: 600px;
+  margin-top: 3rem;
+}
+
+/* ============================================ */
+/*                     HEAD                     */
+/* ============================================ */
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  color: #faf5ff;
+  transition: all 1s ease;
+
+  .toggle {
+    cursor: pointer;
+
+    &:hover {
+      filter: brightness(80%);
+    }
+
+    img:nth-of-type(1) {
+      display: none;
+    }
+
+    img:nth-of-type(2) {
+      display: block;
+    }
+  }
+}
+
+/* ============================================ */
+/*                     .MAIN                    */
+/* ============================================ */
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.218);
+}
+
+/* ---------------- .MAIN-INPUT --------------- */
+.main-input {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  width: 100%;
+
+  transition: all 1s ease;
+  border-radius: 5px;
+  padding: 0.8rem 1rem;
+  font-size: 1.2rem;
+  background: #ffffff;
+
+  .bt-add {
+    width: 30px;
+    height: 30px;
+    border-radius: 100rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to top, #9d7df9, #76b8f9);
+    font-size: 2.5rem;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  .input-text {
+    flex: 1;
+    background: #ffffff;
+    color: #4b4c51;
+    transition: all 1s ease;
+  }
+}
+
+.main-output {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+}
+
+.main-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  transition: all 1s ease;
+  background: #ffffff;
+  color: #6f6f7a;
+  border: 1px solid black;
+  border-radius: 0 0 10px 10px;
+
+  .op-choose {
+    user-select: none;
+    cursor: pointer;
+
+    .all:hover {
+      color: black;
+      font-weight: 700;
+    }
+    .completed:hover {
+      color: black;
+      font-weight: 700;
+    }
+    .active:hover {
+      font-weight: 700;
+
+      color: black;
+    }
+  }
+  .actived {
+    color: blue;
+    font-weight: 700;
+  }
+
+  .op-clear {
+    user-select: none;
+
+    &:hover {
+      color: black;
+      cursor: pointer;
+      font-weight: 700;
+    }
+  }
+}
+
+/* ============================================ */
+/*                      items                     */
+/* ============================================ */
+
+.item {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  background: white;
+  border: 1px solid black;
+  border-bottom: none;
+  cursor: pointer;
+  padding-left: 1rem;
+  transition: all 1s ease;
+
+  &:hover {
+    filter: invert(0.1);
+  }
+
+  &.checked > .text {
+    text-decoration: line-through;
+    opacity: 0.7;
+  }
+
+  &.checked > .check > img {
+    display: block;
+  }
+
+  .text {
+    flex: 1;
+    text-align: left;
+    padding: 1rem 0rem;
+    transition: all 1s ease;
+    padding-left: 0.8rem;
+  }
+
+  .check {
+    width: 30px;
+    height: 30px;
+    border-radius: 100rem;
+    transition: all 1s ease;
+
+    cursor: pointer;
+    user-select: none;
+    padding: 0rem;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      display: none;
+      width: 100%;
+      height: 100%;
+      border-radius: 100rem;
+      background-image: linear-gradient(to top, #948cfa, #79b3f9);
+      padding: 0.5rem;
+    }
+  }
+
+  .close {
+    cursor: pointer;
+    padding: 1rem;
+    height: 100%;
+
+    &:hover {
+      background: rgba(179, 163, 163, 0.517);
+    }
+  }
+}
+
+// delete
+.delete {
+  transform: translateX(20%);
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+/* --------------------- V -------------------- */
+.drag {
+  padding: 1.5rem;
+  font-size: 1.5rem;
+}

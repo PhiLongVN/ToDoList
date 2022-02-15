@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./style/main.css" />
+    <title>Frontend Mentor | Todo app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 30px;
+        padding: 1rem;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- ========================================= -->
+      <!--                   HEAD                    -->
+      <!-- ========================================= -->
+      <header class="head">
+        <h1 class="title">todo</h1>
+
+        <div class="toggle">
+          <img src="./images/icon-sun.svg" alt="" />
+          <img src="./images/icon-moon.svg" alt="" />
+        </div>
+      </header>
+
+      <!-- ========================================= -->
+      <!--                   .MAIN                   -->
+      <!-- ========================================= -->
+      <main class="main">
+        <!-- ----------------- INPUT ----------------- -->
+        <div class="main-input">
+          <div class="bt-add">+</div>
+          <input type="text" placeholder="Fill Your Goal" class="input-text" />
+        </div>
+
+        <!-- ----------------- OUPUT ----------------- -->
+        <div class="main-output">
+          <ul class="output-list"></ul>
+
+          <div class="main-option">
+            <div class="op-left">0 items left</div>
+            <div class="op-choose">
+              <span class="all">All</span>
+              <span class="active">Active</span>
+              <span class="completed">Completed</span>
+            </div>
+
+            <div class="op-clear">CLear Completed</div>
+          </div>
+        </div>
+
+        <!-- ---------------- OPTION ----------------- -->
+      </main>
+    </div>
+
+    <div class="drag">Drag and drop to reorder list</div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Huynh Phi Long</a>.
+    </div>
+
+    <script src="./script/script.js"></script>
+  </body>
+</html>

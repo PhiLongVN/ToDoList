@@ -1,0 +1,68 @@
+body.active {
+  background-image: url(../images/bg-desktop-dark.jpg);
+  background-color: #25273c;
+
+  /* ------------------- HEAD ------------------- */
+  .head {
+    color: #faf5ff;
+    transition: all 1s ease;
+
+    .toggle {
+      img:nth-of-type(2) {
+        display: none;
+      }
+      img:nth-of-type(1) {
+        display: block;
+      }
+    }
+  }
+
+  /* ------------------- .MAIN ------------------ */
+  .main {
+    .main-input {
+      background: #25273c;
+
+      .input-text {
+        background: #25273c;
+        color: #b7bbd0;
+      }
+    }
+
+    .main-output {
+      background: #25273c;
+    }
+
+    .main-option {
+      background: #25273c;
+
+      .op-choose {
+        cursor: pointer;
+        .all:hover {
+          color: white;
+        }
+        .completed:hover {
+          color: white;
+        }
+        .active:hover {
+          color: white;
+        }
+      }
+
+      .op-clear:hover {
+        color: white;
+      }
+    }
+  }
+
+  .item {
+    background: #25273c;
+
+    .text {
+      color: white;
+    }
+
+    .check {
+      border: 1px solid white;
+    }
+  }
+}
