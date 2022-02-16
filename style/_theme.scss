@@ -21,6 +21,7 @@ body.active {
   .main {
     .main-input {
       background: #25273c;
+      border: 1px solid black;
 
       .input-text {
         background: #25273c;
@@ -63,6 +64,21 @@ body.active {
 
     .check {
       border: 1px solid white;
+    }
+  }
+}
+
+@media screen and (max-width: 650.98px) {
+  body.active {
+    background-image: url(../images/bg-mobile-dark.jpg);
+
+    .main {
+      .main-option {
+        .op-choose {
+          background: #25273c;
+          color: #b7bbd0;
+        }
+      }
     }
   }
 }

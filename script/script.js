@@ -63,17 +63,18 @@ function addItem() {
 output.onclick = (e) => {
   if (e.target.className === "check" || e.target.className === "text") {
     e.target.parentNode.classList.toggle("checked");
-  }
-  if (e.target.className === "close") {
+    checkleft();
+  } else if (e.target.className === "close") {
     let ii = e.target.parentNode;
     ii.classList.add("delete");
     ii.addEventListener("transitionend", () => {
-      ii.remove();
+      setTimeout(() => {
+        ii.remove();
+        checkleft();
+      }, 700);
     });
     deleteLocal(ii);
   }
-
-  checkleft();
 };
 
 /* ============================================ */
@@ -83,17 +84,23 @@ output.onclick = (e) => {
 function checkleft() {
   const checkleft = document.querySelector(".op-left");
   const items = document.querySelectorAll(".item");
+  console.log("checkleft -> items", items);
   let count = 0;
 
   items.forEach((item) => {
     if (!item.classList.contains("checked")) {
       count++;
+      // console.log("checkleft -> count", count)
       checkleft.innerText = `${count} items left`;
     }
     if (count == 0) {
       checkleft.innerText = `0 items left`;
     }
   });
+
+  if (items.length === 0) {
+    checkleft.innerText = `0 items left`;
+  }
 }
 
 /* ============================================ */
@@ -157,8 +164,13 @@ clear.onclick = () => {
 
   items.forEach((item) => {
     if (item.classList.contains("checked")) {
-      item.remove();
-      deleteLocal(item);
+      setTimeout(() => {
+        item.classList.add("delete");
+        item.addEventListener("transitionend", () => {
+          item.remove();
+        });
+        deleteLocal(item);
+      }, 200);
     }
   });
 };
