@@ -442,10 +442,8 @@ body {
 
 .item .check img {
   display: none;
-  width: 100%;
-  min-height: 30px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  width: 30px;
+  height: 30px;
   border-radius: 100rem;
   background-image: -webkit-gradient(linear, left bottom, left top, from(#948cfa), to(#79b3f9));
   background-image: linear-gradient(to top, #948cfa, #79b3f9);

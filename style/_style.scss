@@ -223,9 +223,9 @@ body {
 
     img {
       display: none;
-      width: 100%;
-      min-height: 30px;
-      object-fit: cover;
+      width: 30px;
+      height: 30px;
+      // object-fit: cover;
       border-radius: 100rem;
       background-image: linear-gradient(to top, #948cfa, #79b3f9);
       padding: 0.5rem;
